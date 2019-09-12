@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Railway';
+    font-size: 22px;
+}
+
+.container {
+    width: 80%;
+    margin: 4em auto;
+
+    h1 {
+        text-decoration: underline;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 1em 1.5em;
+        font-size: 1rem;
+        margin-top: 2em;
+        cursor: pointer;
+        background: rgb(255, 0, 0);
+        color: white;
+        font-weight: bold;
+        will-change: background;
+        transition: background .5s;
+
+        &:hover {
+            background: rgb(255, 62, 62);
+        }
+    }
+}
+
+.overlay {
+    opacity: 1;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.479);
+}
+
+// .bg-blur {
+//     height: 100vh;
+//     width: 100vw;
+//     filter: blur(10px);
+// }
+
+.share, .overlay {
+    display: none;
+}
+
+.show-share {
+    display: block;
+}
+
+.share {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin: auto;
+    width: 50%;
+    z-index: 1;
+    padding: 1em;
+    background: #fff;
+
+    h2 {
+        margin: 0;
+        text-decoration: underline;
+    }
+
+    button {
+        border: none;
+        font-weight: 550;
+        padding: .8em 1.2em;
+        margin-top: 3em;
+        width: 32%;
+        cursor: pointer;
+    }
+
+    button:nth-child(2) {
+        background: rgb(255, 255, 51);
+    }
+    button:nth-child(3) {
+        background: rgb(0, 225, 255);
+    }
+    button:nth-child(4) {
+        background: rgb(15, 255, 67);
+    }
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 70%;
+    }
+}
